@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Praktikum Minggu ke-3</title>
+    <meta charset="utf-8">
+<body>
+
+<h1>Bilangan Fibonacci</h1>
+<p>Masukkan angka untuk mengetahui seberapa banyak bilangan fibonacci:</p>
+
+	<input type="text" id="txtloop"/>
+    
+    <input type="button" id="btnEnter" value="Enter"
+  onclick="fibonacci_series(txtloop.value)"/>
+  
+  <p id="hasil"></p>
+  
+
+<script>
+var fibonacci_series = function (n)
+{
+	if (n==1) {
+    var loop = [0,1];
+    return loop;
+    }
+    
+    else{
+    var s = fibonacci_series(n-1);
+    s.push(s[s.length - 1] + s[s.length - 2]);
+    document.getElementById("hasil").innerHTML =s;
+ return s;
+    }
+};
+	
+</script>

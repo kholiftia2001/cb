@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Praktikum Minggu ke-3</title>
+    <meta charset="utf-8">
+<body>
+
+<h1>Validasi Password</h1>
+<p>Masukkan nama, password dan alamat email anda:</p>
+	Nama		: <input type="text" id="nama"> <br>
+    Password 	: <input type="password" id="pass"> <br>
+	Email		: <input type="email" id="email"> <br>
+    <button onclick="klik()">Klik</button>
+    
+<script>
+	function klik(){
+        var pw, check, txt;
+            var check = "rote16";
+            pw = document.getElementById("pass").value;
+
+            if (pw === check) {
+                txt = "Password benar!";
+                alert(txt);
+            }
+
+            else{
+                txt = "Password salah!";
+                alert(txt);
+            }
+        }
+	
+</script>
